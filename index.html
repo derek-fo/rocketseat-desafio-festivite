@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festivite</title>
+
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="layout">
+        <aside id="logo-content">
+            <img src="assets/Background.png" alt="">
+
+            <div id="inner-content">
+                <div id="logo">
+                    <img src="assets/Logo.svg" alt="logotipo">
+                    <h1>Festivite</h1>
+                    <p class="logo-text">Crie um convite para o seu evento</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="form">
+            <div class="container">
+                <h2>Crie seu convite</h2>
+
+                <form method="post" enctype="multipart/form-data">
+                    <fieldset id="about">
+                        <legend>
+                            <img id="icon" src="assets/icons/calendar.svg" alt="calendar">
+                            Sobre o evento
+                        </legend>
+
+                        <div class="input-wrapper">
+                            <label for="event-name">Título</label>
+                            <input type="text" name="event-name" id="event-name" placeholder="Nome do evento">
+                        </div>
+                        <div class="flex gap-16">
+                            <div class="input-wrapper flex-1">
+                                <label for="event-start">Início</label>
+                                <input type="datetime-local" name="event-start" id="event-start">
+                            </div>
+                            <div class="input-wrapper flex-1">
+                                <label for="event-end">Fim</label>
+                                <input type="datetime-local" name="event-end" id="event-end">
+                            </div>
+                        </div>
+                        <div class="flex gap-16">
+                            <div class="input-wrapper flex-1">
+                                <label for="event-type">Tipo</label>
+                                <div class="segmented-control radio-wrapper">
+                                    <div class="radio-inner">
+                                        <img src="assets/icons/adress.svg" alt="buildings">
+                                        <label for="address">Presencial</label>
+                                        <input type="radio" name="event-type" id="event-type" checked>
+                                    </div>
+                                    <div class="radio-inner">
+                                        <img src="assets/icons/camera.svg" alt="camera">
+                                        <label for="camera">Online</label>
+                                        <input type="radio" name="event-type" id="event-type">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-wrapper flex-1">
+                                <label for="event-local">Local</label>
+                                <input type="text" name="event-local" id="event-local" placeholder="Link ou endereço">
+                            </div>
+                        </div>
+                        <div class="textarea-wrapper">
+                            <label for="event-about">Descrição</label>
+                            <textarea name="event-about" id="event-about" rows="5"
+                                placeholder="Escreva detalhes sobre o evento">
+                            </textarea>
+                        </div>
+                    </fieldset>
+
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

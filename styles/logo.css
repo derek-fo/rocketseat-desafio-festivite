@@ -1,0 +1,24 @@
+aside#logo-content {
+    border-radius: 12px;
+    margin: 20px 0 160px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+aside#logo-content div#logo{
+    position: absolute;
+    /* coloca a logo dentro da imagem */
+    top: 32px;
+    left: 20px;
+}
+
+aside#logo-content div#logo img {
+    width: 48px;
+    height: 46px;
+    display: block;
+}
+
+aside#logo-content p {
+    font: var(--bd-md-light);
+    color: var(--text-heading);
+}
