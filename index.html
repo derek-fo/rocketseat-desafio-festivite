@@ -85,6 +85,168 @@
                         </div>
                     </fieldset>
 
+                    <fieldset id="customization">
+                        <legend for="color">
+                            <img src="assets/icons/paint.svg" alt="paint">
+                            Personalização
+                        </legend>
+
+                        <div id="main-color">
+                            <label class="body-sm">Cor principal</label>
+
+                            <div class="radio-wrapper">
+                                <div class="radio-inner">
+                                    <input type="radio" name="ligthblue" id="ligthblue">
+                                    <div class="circle-inner ligthblue"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="blue" id="blue">
+                                    <div class="circle-inner blue"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="purple" id="purple">
+                                    <div class="circle-inner purple"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="fuschia" id="fuschia">
+                                    <div class="circle-inner fuschia"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="pink" id="pink">
+                                    <div class="circle-inner pink"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="red" id="red">
+                                    <div class="circle-inner red"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="orange" id="orange">
+                                    <div class="circle-inner orange"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="yellow" id="yellow">
+                                    <div class="circle-inner yellow"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="lime" id="lime">
+                                    <div class="circle-inner lime"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="green" id="green">
+                                    <div class="circle-inner green"></div>
+                                </div>
+                                <div class="radio-inner">
+                                    <input type="radio" name="cyan" id="cyan">
+                                    <div class="circle-inner cyan"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="theme">
+                            <label for="theme">Tema do evento</label>
+
+                            <div class="radio-wrapper">
+                                <div class="radio-inner">
+                                    <img src="assets/img/birthday.png" alt="birthday">
+                                    <input type="radio" name="theme" id="birthday">
+                                    <label for="birthday">Aniversário</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/kids.png" alt="child">
+                                    <input type="radio" name="theme" id="child">
+                                    <label for="child">Infantil</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/graduation.png" alt="graduation">
+                                    <input type="radio" name="theme" id="graduation">
+                                    <label for="graduation">Formatura</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/wedding.png" alt="wedding">
+                                    <input type="radio" name="theme" id="wedding">
+                                    <label for="wedding">Casamento</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/newborn.png" alt="newborn">
+                                    <input type="radio" name="theme" id="newborn">
+                                    <label for="newborn">Chá de bebê</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/newhome.png" alt="newhome">
+                                    <input type="radio" name="theme" id="newhome">
+                                    <label for="newhome">Chá de panela</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/carnival.png" alt="carnival">
+                                    <input type="radio" name="theme" id="carnival">
+                                    <label for="carnival">Carnaval</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/easter.png" alt="easter">
+                                    <input type="radio" name="theme" id="easter">
+                                    <label for="easter">Páscoa</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/saojoao.png" alt="junina">
+                                    <input type="radio" name="theme" id="junina">
+                                    <label for="junina">São João</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/halloween.png" alt="halloween">
+                                    <input type="radio" name="theme" id="halloween">
+                                    <label for="halloween">Halloween</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/christmas.png" alt="christmas">
+                                    <input type="radio" name="theme" id="christmas">
+                                    <label for="christmas">Natal</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <img src="assets/img/other.png" alt="other">
+                                    <input type="radio" name="theme" id="other">
+                                    <label for="other">Outro</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="switch-button">
+                            <div id="style">
+                                <label for="switch">Estilo</label>
+                                <div class="switch-wrapper">
+                                    <label class="switch">
+                                        <input type="checkbox" name="switch" id="switch">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="dark-light-text"></span>
+                                </div>
+                            </div>
+
+                            <div class="cover-photo">
+                                <label for="choose-photo">Foto de capa</label>
+                                <div class="input-wrapper">
+                                    <label for="choose-photo-button">
+                                        <img src="assets/icons/upload.svg" alt="upload">Selecionar
+                                        <input type="file" name="choose-photo" id="choose-photo">
+                                    </label>
+                                    <span id="file-name">Nenhum arquivo selecionado
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+
                 </form>
             </div>
         </main>

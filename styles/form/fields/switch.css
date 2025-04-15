@@ -1,0 +1,76 @@
+.switch-wrapper {
+    padding-block: 8px;
+    line-height: 0;
+    display: flex;
+
+    .dark-light-text {
+        margin: 6.5px 0 6.5px 12px;
+        color: var(--text-heading);
+        font: var(--bd-sm);
+        display: inline-block;
+    }
+
+    &:has(input:checked) .dark-light-text::after {
+        content: "Claro";
+    }
+
+    &:has(input:not(:checked)) .dark-light-text::after {
+        content: "Escuro";
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 64px;
+        height: 32px;
+        margin: 0;
+        padding: 0;
+
+        input {
+            all: unset;
+
+            &:checked+.slider {
+                /* cor de fundo ao dar check */
+                background-color: var(--brand-light);
+            }
+
+            &:checked+.slider:before {
+                -webkit-transform: translateX(32px);
+                -ms-transform: translateX(32px);
+                transform: translateX(32px);
+                /* mexe o slider */
+                background-color: var(--text-heading);
+                /* muda cor do slider ao dar check */
+            }
+        }
+
+        .slider {
+            position: absolute;
+            inset: 0;
+            background-color: var(--input-base); /* cor do fundo sem check */
+            outline: 1px solid var(--input-stroke);
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+
+            &:before {
+                position: absolute;
+                content: "";
+                height: 24px;
+                width: 24px;
+                left: 4px;
+                bottom: 4px;
+                background-color: var(--input-stroke); /* cor do slider antes*/
+                -webkit-transition: 0.4s;
+                transition: 0.4s;
+            }
+
+            &.round {
+                border-radius: 34px; /* caixa do slider */
+
+                &.round:before {
+                    border-radius: 50%; /* slider circular */
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@import url(fields/index.css);
+
 main#form {
     border: 1px solid white;
     background-color: var(--shape-body);
@@ -5,11 +7,16 @@ main#form {
     margin: 20px 20px 20px 0;
 
     padding-block: 80px;
-    overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
 }
 
 div>h2 {
     border: 1px solid white;
+    margin-left: 40px;
 }
 
 form{
@@ -19,17 +26,33 @@ form{
 
 fieldset{
     border: none;
-    margin-bottom: 40px;
-
-
+    margin-bottom: 48px;
 }
 
 legend{
     font: var(--hd-sm);
     color: var(--text-heading);
-    margin-bottom: 24px;
+    margin-block: 24px;
 
     display: flex; /* centraliza com a imagem */
     gap: 12px;
     align-items: center;
+}
+
+#icon{
+    width: 24px;
+    height: 24px;
+}
+
+#switch-button{
+    display: flex;
+
+    label {
+        color: var(--text-body);
+      }
+
+      #style {
+        flex: 1;
+        max-width: 176px;
+      }
 }

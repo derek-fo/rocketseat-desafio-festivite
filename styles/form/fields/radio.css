@@ -1,0 +1,64 @@
+.segmented-control {
+    height: 48px;
+    border: 1px solid var(--input-stroke);
+    border-radius: 8px;
+    background-color: var(--input-base);
+
+    display: flex;
+    /* botões lado a lado */
+    gap: 4px;
+    padding-inline: 4px;
+
+    .radio-inner {
+        margin-block: 4px;
+        padding-top: 12px;
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        gap: 8px;
+
+        position: relative;
+
+        label {
+            font: var(--bd-sm);
+            color: var(--text-body);
+            line-height: 1;
+        }
+
+        img {
+            all: unset;
+            height: 16px;
+            width: 16px;
+        }
+
+        input {
+            /* tira o radio padrão */
+            all: unset;
+            position: absolute;
+            inset: 0;
+        }
+
+        &:has(:checked) {
+            /* cria uma forma em volta do radio como botão */
+            background-color: var(--shape-button);
+
+            label {
+                color: var(--text-heading);
+                font: var(--bd-sm-semibold);
+                line-height: 1;
+            }
+
+            img {
+                /* muda cor quando der check */
+                filter: invert(67%) sepia(56%) saturate(3083%) hue-rotate(184deg) brightness(104%) contrast(101%);
+            }
+        }
+    }
+
+    &:hover,
+    &:has(input:focus) {
+        outline-color: var(--brand-light);
+    }
+}
