@@ -33,9 +33,10 @@
 
         <main id="form">
             <div class="container">
-                <h2>Crie seu convite</h2>
+                
 
                 <form method="post" enctype="multipart/form-data">
+                    <h2>Crie seu convite</h2>
                     <fieldset id="about">
                         <legend>
                             <img id="icon" src="assets/icons/calendar.svg" alt="calendar">
@@ -96,47 +97,47 @@
 
                             <div class="radio-wrapper">
                                 <div class="radio-inner">
-                                    <input type="radio" name="ligthblue" id="ligthblue">
+                                    <input type="radio" name="main-color" id="ligthblue">
                                     <div class="circle-inner ligthblue"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="blue" id="blue">
+                                    <input type="radio" name="main-color" id="blue">
                                     <div class="circle-inner blue"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="purple" id="purple">
+                                    <input type="radio" name="main-color" id="purple">
                                     <div class="circle-inner purple"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="fuschia" id="fuschia">
+                                    <input type="radio" name="main-color" id="fuschia">
                                     <div class="circle-inner fuschia"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="pink" id="pink">
+                                    <input type="radio" name="main-color" id="pink">
                                     <div class="circle-inner pink"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="red" id="red">
+                                    <input type="radio" name="main-color" id="red">
                                     <div class="circle-inner red"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="orange" id="orange">
+                                    <input type="radio" name="main-color" id="orange">
                                     <div class="circle-inner orange"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="yellow" id="yellow">
+                                    <input type="radio" name="main-color" id="yellow">
                                     <div class="circle-inner yellow"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="lime" id="lime">
+                                    <input type="radio" name="main-color" id="lime">
                                     <div class="circle-inner lime"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="green" id="green">
+                                    <input type="radio" name="main-color" id="green">
                                     <div class="circle-inner green"></div>
                                 </div>
                                 <div class="radio-inner">
-                                    <input type="radio" name="cyan" id="cyan">
+                                    <input type="radio" name="main-color" id="cyan">
                                     <div class="circle-inner cyan"></div>
                                 </div>
                             </div>
@@ -232,10 +233,10 @@
                                 </div>
                             </div>
 
-                            <div class="cover-photo">
+                            <div id="cover-photo">
                                 <label for="choose-photo">Foto de capa</label>
                                 <div class="input-wrapper">
-                                    <label for="choose-photo-button">
+                                    <label id="choose-photo-button">
                                         <img src="assets/icons/upload.svg" alt="upload">Selecionar
                                         <input type="file" name="choose-photo" id="choose-photo">
                                     </label>
@@ -245,8 +246,60 @@
                             </div>
                         </div>
                     </fieldset>
+                    <fieldset id="contact">
+                        <legend>
+                            <img class="icon" src="assets/icons/profile.svg" alt="contact">
+                            Dados para contato
+                        </legend>
 
+                        <div class="input-wrapper">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" placeholder="Nome completo" required>
+                            <div class="error">
+                                <img class="icon" src="assets/icons/alert.svg" alt="alerta">
+                                <span>Campo obrigatório!</span>
+                            </div>
+                        </div>
 
+                        <div class="flex gap-16">
+                            <div class="input-wrapper flex-1">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" id="email" placeholder="seuemail@email.com" required>
+                                <div class="error">
+                                    <img class="icon" src="assets/icons/alert.svg" alt="alerta">
+                                    <span>Campo obrigatório!</span>
+                                </div>
+                            </div>
+                            <div class="input-wrapper flex-1">
+                                <label for="phone">Telefone</label>
+                                <input name="phone" type="tel" id="phone" placeholder="(99) 99999-9999" />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <hr>
+
+                    <fieldset id="terms">
+                        <label class="checkbox-wrapper">Li e concordo com os <a href="#">Termos e Condições</a> e as <a href="#">Políticas de Privacidade</a>.
+                            <input type="checkbox" name="agree" id="agree">
+                            <span class="check"></span>
+                        </label>
+                        <label class="checkbox-wrapper">
+                            Aceito receber novidades por e-mail.
+                            <input type="checkbox" name="agree" id="agree">
+                            <span class="check"></span>
+                        </label>
+                        <label class="checkbox-wrapper">
+                            Aceito receber novidades por SMS.
+                            <input type="checkbox" name="agree" id="agree">
+                            <span class="check"></span>
+                        </label>
+                    </fieldset>
+
+                    <button type="submit" id="ticket">
+                        <img class="icon" src="assets/icons/ticket.svg" alt="ticket">
+                        Gerar convite
+                    </button>
                 </form>
             </div>
         </main>

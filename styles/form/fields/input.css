@@ -3,8 +3,9 @@ input {
 }
 
 input,
-textarea {
-width: 100%;
+textarea,
+select {
+    width: 100%;
     padding: 13px 16px;
     margin-bottom: 16px;
     border: 1px solid var(--input-stroke);
@@ -22,4 +23,77 @@ width: 100%;
     &::placeholder {
         color: var(--input-placeholder);
     }
+
+    &:invalid {
+        outline: 1px solid var(--danger);
+    }
+
+    &:valid+.error {
+        display: none;
+    }
+}
+
+input[type="datetime-local"] {
+    /* cor do calendario */
+    color-scheme: dark;
+
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0.7;
+    }
+}
+
+.input-wrapper {
+    margin-bottom: 16px;
+}
+
+#cover-photo {
+    .input-wrapper {
+        all: unset;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        label#choose-photo-button {
+            gap: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 6px;
+            position: relative;
+            width: 119px;
+            height: 40px;
+            background-color: var(--shape-button);
+            border-radius: 8px;
+            font: var(--bd-sm-semibold);
+            color: var(--text-heading);
+            padding-block: 8px;
+
+            &:hover {
+                background-color: var(--shape-hover);
+            }
+
+            input[type="file"] {
+                width: 120px;
+                height: 40px;
+                opacity: 0;
+                position: absolute;
+            }
+        }
+    #file-name{
+        color: var(--input-placeholder);
+        font: var(--bd-md);
+        max-width: 234px;
+    }
+    }
+}
+
+.error{
+    font: var(--bd-sm);
+    color: var(--danger);
+    margin-top: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }

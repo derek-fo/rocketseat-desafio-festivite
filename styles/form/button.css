@@ -1,0 +1,16 @@
+button {
+    all: unset;
+    padding: 13px 20px;
+    background-color: var(--brand-mid);
+    border-radius: 8px;
+    font: var(--bd-md-semibold);
+    color: var(--text-heading);
+
+    float: right;
+    display: flex;
+    gap: 12px;
+
+    &:hover {
+        background-color: var(--brand-dark);
+    }
+}
